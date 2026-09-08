@@ -1,0 +1,10 @@
+services:
+  tenis-pqc:
+    build: .
+    container_name: tenis-pqc
+    ports:
+      - "8443:8443"
+    volumes:
+      - ./certs:/pqc-lab/certs
+      - ./www:/pqc-lab/www:ro
+    restart: unless-stopped
