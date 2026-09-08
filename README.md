@@ -27,10 +27,12 @@ Cliente (navegador) ──TLS 1.3──> openssl s_server (contenedor Docker)
 
 ### Probarlo con la imagen publicada
 > docker pull ghcr.io/marietee12/pqc-tenis-poc:latest
+> 
 > docker run -p 8443:8443 ghcr.io/marietee12/pqc-tenis-poc:latest
 
 ### Construirlo desde el código
 > docker build -t pqc-tenis-poc .
+> 
 > docker run -p 8443:8443 pqc-tenis-poc
 
 Una vez arrancado, visita: **https://localhost:8443**
