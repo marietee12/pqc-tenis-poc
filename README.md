@@ -26,12 +26,12 @@ Cliente (navegador) ──TLS 1.3──> openssl s_server (contenedor Docker)
 ## Uso rápido
 
 ### Probarlo con la imagen publicada
-docker pull ghcr.io/marietee12/pqc-tenis-poc:latest
-docker run -p 8443:8443 ghcr.io/marietee12/pqc-tenis-poc:latest
+> docker pull ghcr.io/marietee12/pqc-tenis-poc:latest
+> docker run -p 8443:8443 ghcr.io/marietee12/pqc-tenis-poc:latest
 
 ### Construirlo desde el código
-docker build -t pqc-tenis-poc .
-docker run -p 8443:8443 pqc-tenis-poc
+> docker build -t pqc-tenis-poc .
+> docker run -p 8443:8443 pqc-tenis-poc
 
 Una vez arrancado, visita: **https://localhost:8443**
 
@@ -40,7 +40,7 @@ Una vez arrancado, visita: **https://localhost:8443**
 ## Verificar el intercambio de claves post-cuántico
 Para confirmar que el intercambio de claves fue realmente post-cuántico:
 
-openssl s_client -connect localhost:8443 -groups X25519MLKEM768 | grep "Negotiated"
+> openssl s_client -connect localhost:8443 -groups X25519MLKEM768 | grep "Negotiated"
 
 Deberías ver `X25519MLKEM768` como grupo negociado.
 
