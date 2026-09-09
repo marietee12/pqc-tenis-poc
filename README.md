@@ -57,16 +57,17 @@ Deberías ver `X25519MLKEM768` como grupo negociado.
 
 ### Capturas
 
-*(añadir imágenes en `docs/screenshots/` y referenciarlas aquí, ver sección siguiente)*
+**Certificado ML-DSA-65 visto desde Chrome:**
+![Certificado en Chrome](docs/screenshots/chrome-cert.png)
 
-**Navegador con soporte PQC — negociación X25519MLKEM768:**
-![Chrome con soporte PQC](docs/screenshots/chrome-pqc-ok.png)
+**Certificado ML-DSA-65 visto desde Edge:**
+![Certificado en Edge](docs/screenshots/edge-cert.png)
 
-**Navegador sin soporte PQC — fallback a X25519 clásico:**
-![Navegador sin soporte PQC](docs/screenshots/browser-no-pqc.png)
+**Edge sin soporte PQC — no puede completar el handshake:**
+![Edge sin soporte PQC](docs/screenshots/edge-no-pqc-fail.png)
 
-**Verificación por terminal con openssl s_client:**
-![Verificación openssl s_client](docs/screenshots/openssl-verify.png)
+**Verificación forzada del certificado mediante `openssl s_client`:**
+![Verificación forzada en terminal](docs/screenshots/firefox-forced-sigalg.png)
 
 ## Estructura del proyecto
 
